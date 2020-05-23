@@ -82,6 +82,7 @@
                         <web-view id="webView"></web-view>
                     </ContentView>
 
+
                     <StackLayout class="blue_background" marginLeft="10" marginTop="10" orientation="vertical" horizontalAlignment="left" verticalAlignment="top" visibility="{{current_position}}" row="1" width="200">
                         <StackLayout verticalAlignment="center" horizontalAlignment="center" tap="onTapDetail" marginTop="10" marginLeft="5" marginRight="5">
                             <Label text="{{ position }}" style="font-weight:bold; flex-grow:1; font-size: 16"/>
@@ -180,6 +181,10 @@
                                 <Label col="7" text="28" fontSize="11" color="white"/>
                                 <Label col="8" text="35" fontSize="11" color="white"/>
                                 <Label col="9" text="50kn" fontSize="11" marginRight="5" color="white"/>
+                            </GridLayout>
+
+                            <GridLayout class="class_image_bar" horizontalAlignment="center" width="100%" height="10%" opacity="0.8" backgroundColor="rgba(30,76,117,1)" ontap="tap_newVersion" borderWidth="2" borderColor="red">
+                                <Label verticalAlignment="center" textWrap="true" horizontalAlignment="center" col="0" text="Clicca qui per scaricare la nuova applicazione Meteo Uniparthenope !" fontSize="14" marginLeft="5" color="red"/>
                             </GridLayout>
                         </StackLayout>
                     </StackLayout>

@@ -13,6 +13,9 @@ const Color = require("tns-core-modules/color").Color;
 let BarcodeScanner = require("nativescript-barcodescanner").BarcodeScanner;
 let barcodescanner = new BarcodeScanner();
 let messaging = require("nativescript-plugin-firebase/messaging");
+const utilsModule = require("tns-core-modules/utils/utils");
+
+
 
 var drawer;
 var oLangWebViewInterface;
@@ -46,6 +49,14 @@ exports.pageLoaded = function(args) {
   page = args.object;
   setupWebViewInterface(page);
   contatore++;
+  // AVVISO CAMBIO VERSIONE
+  dialog.alert({
+    title: "Attenzione",
+    message: "A breve il supporto per questa applicazione non sarà più disponibile !\n\nScarica la nuova applicazione!",
+    okButtonText: "OK"
+
+  }).then();
+
   console.log("Contatore: " + contatore);
   contatore_detail = 0;
 
@@ -1049,3 +1060,8 @@ function set_preferiti(){
     home.set("pref", "collapsed");
   }
 }
+exports.tap_newVersion = function(){
+  if (platformModule.isAndroid){
+    utilsModule.openUrl("market://details?id=it.meteo.uniparthenope");
+  }
+};
