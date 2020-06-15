@@ -1062,6 +1062,6 @@ function set_preferiti(){
 }
 exports.tap_newVersion = function(){
   if (platformModule.isAndroid){
-    utilsModule.openUrl("market://details?id=it.meteo.uniparthenope");
+    utilsModule.openUrl("market://details?id=it.uniparthenope.meteo");
   }
 };
